@@ -15,17 +15,32 @@
 */
 
 //Code here
+var me= {
+  name: "Divya",
+  age:33
+}
+alert(me.name);
+
 
 
 
 ////////// PROBLEM 2 //////////
 
-/*
+/*````
   Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. 
   Have the values to those keys be your favorite thing in that category.
 */
 
 //Code here
+
+var favoriteThings = {
+  band: "Maroon5" ,
+  food: "Indian",
+  person:"Michelle Obama" ,
+  book: "The God of Small Things",
+  movie: "96",
+  holiday: "Switzerland"
+};
 
 
 
@@ -35,6 +50,8 @@
 
 //Code here
 
+favoriteThings.car ="Lexus" ;
+favoriteThings.brand = "Lexus";
 
 
 /*
@@ -42,6 +59,8 @@
 */
 
 //Code here
+favoriteThings.food ="Chicken Nuggets";
+favoriteThings.book = "Harry Potter";
 
 
 
@@ -57,14 +76,18 @@
 
 //Code here
 
-
+var backPack = {};
+var item = "firstPocket";
+backPack[item] ="" ;
+backPack[item] ="chapstick";
+backPack.color = "black";
 
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
+alert(backPack);
 
 
 /*
@@ -75,6 +98,7 @@ Instead, console.log your whole backPack object and then check out the console.
 
 //Code here
 
+console.log(backPack);
 
 
 ////////// PROBLEM 4 //////////
@@ -99,7 +123,8 @@ var user2 = {
 //Code Here
 
 
-
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";
 
 
 
@@ -121,6 +146,7 @@ var user2 = {
 
 //Code Here
 
+var methodCollection = {};
 
 
 /*
@@ -130,7 +156,14 @@ var user2 = {
 
 //Code Here
 
+methodCollection.alertHello = function (){
+  alert("hello");
 
+};
+
+methodCollection.logHello = function (){
+  console.log("hello");
+};
 
 /*
   Now call your alertHello and logHello methods.
@@ -138,7 +171,8 @@ var user2 = {
 
 //Code Here
 
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 ////////// PROBLEM 6 //////////
 
@@ -149,7 +183,17 @@ var user2 = {
 
 //Code Here
 
+function makePerson (name,birthday,ssn) {
+  var obj = {
+    name: name ,
+    birthday:birthday ,
+    ssn: ssn
+  };
+  // Return it
+  return obj; 
+}
 
+makePerson("divya","16 Jan 1985",675373239);
 
 ////////// PROBLEM 7 //////////
 
@@ -161,3 +205,12 @@ var user2 = {
 //Code Here
 
 
+function makeCard (cardNumber,expirationDate,securityCode){
+  var obj = {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  };
+  return obj;
+}
+makeCard(376734,"july 2020",123);
